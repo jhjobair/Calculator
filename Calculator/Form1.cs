@@ -67,6 +67,7 @@ namespace Calculator
         {
             TxtResult.Text = TxtResult.Text + "7";
 
+
         }
 
         private void Btn8_Click(object sender, EventArgs e)
@@ -89,9 +90,16 @@ namespace Calculator
         private void BtnPlus_Click(object sender, EventArgs e)
         {
             opt = "+";
-
-            number1 = int.Parse(TxtResult.Text);
-            TxtResult.Clear();
+            try
+            {
+                number1 = int.Parse(TxtResult.Text);
+                TxtResult.Clear();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
 
 
         }
@@ -121,23 +129,43 @@ namespace Calculator
         private void BtnMinus_Click(object sender, EventArgs e)
         {
             opt = "-";
-
-            number1 = int.Parse(TxtResult.Text);
-            TxtResult.Clear();
+            try
+            {
+                number1 = int.Parse(TxtResult.Text);
+                TxtResult.Clear();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private void BtnDivition_Click(object sender, EventArgs e)
         {
             opt = "÷";
-            number1 = int.Parse(TxtResult.Text);
-            TxtResult.Clear();
+            try
+            {
+                number1 = int.Parse(TxtResult.Text);
+                TxtResult.Clear();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private void BtnX_Click(object sender, EventArgs e)
         {
             opt = "x";
-            number1 = int.Parse(TxtResult.Text);
-            TxtResult.Clear();
+            try
+            {
+                number1 = int.Parse(TxtResult.Text);
+                TxtResult.Clear();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
